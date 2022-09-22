@@ -144,12 +144,12 @@ h2{
 }
 .button-simule-aqui{
     display: flex;
-    width: 30%;
-    height: 76px;
+    width: 20%;
+    height: 60px;
 
     font-family: 'Manrope', sans-serif;
     font-weight: 800;
-    font-size: 2vw;
+    font-size: 1.5vw;
 
     justify-content: center;
     align-items: center;
