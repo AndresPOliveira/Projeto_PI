@@ -18,7 +18,7 @@ body {
 .sectionLogin{
     display: flex;
     width: 90%;
-    height: 100vh;
+    height: 90vh;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -37,13 +37,13 @@ body {
 }
 .containerImgLogin img{
     height: auto;
-    width: 33vw;
+    width: 35vw;
 }
 
 .containerTextLogin{
     display: flex;
     width: 28vw;
-    height: 490px;
+    height: 500px;
     
     background-color: #38789D;
     border-radius: 23px;
@@ -76,7 +76,63 @@ body {
     width: 19vw;
     height: 38px;
     border-radius: 4px;
+    padding: 20px;
+
+    font-family: 'Manrope';
+    font-weight: 500;
+    color: #0B3C58;
+    
+}
+.containerInput input:focus{
+    background-color: #E8F1F2;
+}
+label{
+    font-family: 'Manrope';
+    font-weight: 700;
+    color: #FFFFFF;
+
+    margin-bottom: 5px;
 }
 .containerInput .input1{
     margin-bottom: 45px;
+}
+.buttonLogin{
+    display: flex;
+
+    font-family: 'Manrope';
+    font-weight: 800;
+    color: #FFFFFF;
+
+    width: 12vw;
+    height: 48px;
+
+    background-color:#0B3C58;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+    margin-bottom: 32px;
+}
+
+.buttonLogin:hover{
+    background-color:#345E77;
+    transition: 1s;
+    
+}
+.containerLogo{
+    width: 80%;
+    margin: auto;
+}
+.span-logo {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+h1 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1.5vw;
+    color: #326F92;
 }
