@@ -50,6 +50,7 @@ body {
     align-items: center;
    
     flex-direction: column;
+    border: #0B3C58 2px solid;
 }
 .containerTextLogin h2{
     font-family: 'Manrope';
@@ -68,6 +69,7 @@ body {
     align-items: center;
     width: 416px;
     height: 300px;
+    
 }
 .containerInput input{
     outline: unset;
@@ -135,4 +137,11 @@ h1 {
     font-weight: 700;
     font-size: 1.5vw;
     color: #326F92;
+}
+
+.cadastro {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 0.99vw;
+    color: #E8F1F2;
 }
