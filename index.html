@@ -4,59 +4,115 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simulador Financeiro</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/Img_Icon_Logo.png"
+      type="image/x-icon" />
+    <title>Fleming</title>
   </head>
   <body>
-    <h1>Simulador Financeiro da Fleming</h1>
-    <p>Entre com a quantidade de comprimidos pretendidas para produção:</p>
-    <input type="text" id="quantidadeComprimidos" />
-    <br />
-    <p>Digite seu tipo de comprimido:</p>
-    <input
-      type="text"
-      id="tpRemedio"
-      placeholder="Oxicodona, Metadona ou Hidromorfona"
-      style="width: 250px" />
-    <br />
-    <br />
-    <button onclick="calc()">Calcule</button> <br><br>
-    <div id="div_msg"></div>
+    <!--NavBar-->
+    <header>
+      <nav class="container">
+        <span class="span-logo"
+          ><h1>Fleming</h1>
+          <img
+            class="img-logo-gota"
+            src="assets/Img_Icon_Logo.png"
+            alt="logoGotas"
+        /></span>
+
+        <ul class="navbar">
+          <a href="#Home" class="efect2"><li>Home</li></a>
+          <a href="#Sobre" class="efect2"><li>Sobre</li></a>
+          <a href="#Aplicação" class="efect2"><li>Aplicações</li></a>
+          <a href="#Simulador" class="efect2"><li>Simulador</li></a>
+          <a href="login.html" class="efect"><li>Login</li></a>
+        </ul>
+      </nav>
+    </header>
+    <!--Home-->
+    <section class="container section-container" id="Home">
+      <div class="img-home">
+        <img src="assets/Img_Home.svg" alt="ImagemHome" />
+      </div>
+      <div class="slogam-home">
+        <h2>
+          Controle Qualidade e Produção
+          <br /><span class="efect-fleming">Isso é Fleming</span>
+        </h2>
+      </div>
+    </section>
+    <!--Sobre-->
+    <section class="container section-container" id="Sobre">
+      <div class="container-sobre">
+        <div class="container-sobre-nós">
+          <h2>Sobre nós</h2>
+          <p>
+            Trabalhamos com o objetivo de monitorar a umidade do ar na produção
+            de remédios para ajudar você a evitar perdas e otimizar sua
+            produção.
+          </p>
+        </div>
+        <div class="img-sobre">
+          <img src="assets/Img_Sobre.svg" alt="ImagemRepresentativaEquipe" />
+        </div>
+      </div>
+    </section>
+    <!--Serviços-->
+    <section class="container section-container" id="Aplicação">
+      <!--Card1-->
+      <div class="containerCard">
+        <div class="card">
+          <div class="imgCard">
+            <img src="assets/img_card1.svg" alt="" />
+          </div>
+          <div class="content">
+            <p>
+              Nosso sofisticado sistema de monitoramento proporciona em tempo
+              real a umidade do ar das salas de produção.
+            </p>
+          </div>
+        </div>
+        <!--Card2-->
+        <div class="card">
+          <div class="imgCard">
+            <img src="assets/img_card2.svg" alt="" />
+          </div>
+          <div class="content">
+            <p>
+              Com nossa solução proporcionamos ganhos de até 15% da sua produção
+              de forma a evitar perdas e aumentar o seu rendimento.
+            </p>
+          </div>
+        </div>
+        <!--Card3-->
+        <div class="card">
+          <div class="imgCard">
+            <img src="assets/img_card3.svg" alt="" />
+          </div>
+          <div class="content">
+            <p>
+              Nossa aplicação tem base em dashboards exclusivos para o seu
+              laboratório e métricas que são decisivas para os seus ganhos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Simulador-->
+    <section class="section-container" id="Simulador">
+      <div class="container">
+        <div class="img-dash-board">
+          <img src="assets/Img_DashBoard.svg" alt="ImagemDashBoard" />
+        </div>
+        <div class="container-dash-board">
+          <div class="button-simule-aqui">
+            <a href="simulador.html">Simule Aqui</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
-
-<script>
-  function calc() {
-    var qtdComprimidos = quantidadeComprimidos.value;
-    var perdidos = qtdComprimidos*0.15;
-    var remedio = tpRemedio.value;
-    var cusProducao = 0;
-    var X = 0.38;
-    var Y = 0.46;
-    var Z = 0.67;
-    var perdas = 0;
-
-    if (remedio == "Oxicodona") {
-      cusProducao = X * qtdComprimidos;
-      perdas = perdidos*X;
-    } else if (remedio == "Metadona") {
-      cusProducao = Y * qtdComprimidos;
-      perdas = perdidos*Y;
-    } else if (remedio == "Hidromorfona") {
-      cusProducao = Z * qtdComprimidos;
-      perdas = perdidos*Z;
-    } else {
-      alert(
-        "Não trabalhamos com esse tipo de comprimido. Insira no campo do tipo de comprimido: Oxicodona, Metadona ou Hidromorfona"
-      );
-    }
-
-    div_msg.innerHTML = `
-    Para atingir sua meta você está gastando : <b>R$${cusProducao.toFixed(2)}</b> <br>
-    A quantidade de comprimidos perdidos é: <b>${perdidos.toFixed(0)}</b> <br>
-    Logo sua perda monetaria está sendo de : <b>R$${perdas.toFixed(2)}</b><br>
-   
-    
-
-    `
-  }
-</script>

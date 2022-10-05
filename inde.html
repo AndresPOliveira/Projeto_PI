@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador Financeiro</title>
+  </head>
+  <body>
+    <h1>Simulador Financeiro da Fleming</h1>
+    <p>Entre com a quantidade de comprimidos pretendidas para produção:</p>
+    <input type="text" id="quantidadeComprimidos" />
+    <br />
+    <p>Digite seu tipo de comprimido:</p>
+    <input
+      type="text"
+      id="tpRemedio"
+      placeholder="Oxicodona, Metadona ou Hidromorfona"
+      style="width: 250px" />
+    <br />
+    <br />
+    <button onclick="calc()">Calcule</button> <br><br>
+    <div id="div_msg"></div>
+  </body>
+</html>
+
+<script>
+  function calc() {
+    var qtdComprimidos = quantidadeComprimidos.value;
+    var perdidos = qtdComprimidos*0.15;
+    var remedio = tpRemedio.value;
+    var cusProducao = 0;
+    var X = 0.38;
+    var Y = 0.46;
+    var Z = 0.67;
+    var perdas = 0;
+
+    if (remedio == "Oxicodona") {
+      cusProducao = X * qtdComprimidos;
+      perdas = perdidos*X;
+    } else if (remedio == "Metadona") {
+      cusProducao = Y * qtdComprimidos;
+      perdas = perdidos*Y;
+    } else if (remedio == "Hidromorfona") {
+      cusProducao = Z * qtdComprimidos;
+      perdas = perdidos*Z;
+    } else {
+      alert(
+        "Não trabalhamos com esse tipo de comprimido. Insira no campo do tipo de comprimido: Oxicodona, Metadona ou Hidromorfona"
+      );
+    }
+
+    div_msg.innerHTML = `
+    Para atingir sua meta você está gastando : <b>R$${cusProducao.toFixed(2)}</b> <br>
+    A quantidade de comprimidos perdidos é: <b>${perdidos.toFixed(0)}</b> <br>
+    Logo sua perda monetaria está sendo de : <b>R$${perdas.toFixed(2)}</b><br>
+   
+    
+
+    `
+  }
+</script>
