@@ -6,36 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="assets/Img_Icon_Logo.png"
+      href=""
       type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="cadastro.css" />
-    <title>Fleming</title>
+    <link rel="stylesheet" href="css/loginStyle.css" />
+    <link rel="stylesheet" href="css/cadastro.css" />
+    <title>Cadastro</title>
   </head>
   <body>
     <section class="container">
+      <div class="containerLogo">
+        <span class="span-logo"
+          ><a href="index.html"><h1>Fleming</h1></a>
+          <img
+            class="img-logo-gota"
+            src="assets/Img-logo-azul.png"
+            alt="logoGotas"
+        /></span>
+      </div>
+      <div class="title"><h2>CADASTRE-SE</h2></div>
       <div class="container2">
         <div class="imgCadastro">
           <img src="assets/Img_Cadastro.svg" alt="" />
         </div>
 
         <div class="containerCadastro">
-          <h2>INFORME OS CAMPOS A BAIXO</h2>
-
-          <input type="text" placeholder="NOME" />
-          <input type="text" placeholder="CNPJ" />
-          <input type="tel" placeholder="TELEFONE" />
-
-          <input type="email" placeholder="E-MAIL" />
-          <input type="password" placeholder="SENHA" />
-          <input type="password" placeholder="CONFIRMAR SENHA" />
-
-          <input type="text" placeholder="CEP" />
-          <input type="text" placeholder="NÚMERO" />
-
-          <div class="button"><a href="">CADASTRAR</a></div>
+          <div class="containerInput1">
+            <label for="">Nome</label>
+            <input type="text" placeholder="Digite o nome da empresa" />
+            <label for="">CNPJ</label>
+            <input type="text" placeholder="Digite o cnpj" />
+            <label for="">Telefone Empresarial</label>
+            <input type="tel" placeholder="(xx) xxxx-xxxx" />
+            <label for="">Telefone Celular</label>
+            <input type="tel" placeholder="(xx) xxxxx-xxxx" />
+          </div>
+          <div class="containerInput2">
+            <label for="">E-mail</label>
+            <input type="email" placeholder="e-mail" />
+            <label for="">Senha</label>
+            <input type="password" placeholder="*********" />
+            <label for="">Confirme a Senha</label>
+            <input type="password" placeholder="*********" />
+          </div>
         </div>
       </div>
+      <div class="buttonContinuar"><a href="cadastro_labs.html">CONTINUAR</a></div>
     </section>
   </body>
 </html>

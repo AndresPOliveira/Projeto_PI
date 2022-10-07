@@ -41,7 +41,6 @@ header{
     color: #FFFFFF;
     position: fixed;
     z-index: 10;
-    /* colocar o header para frente, como se fosse quase 3D*/
     
 }
  nav{
@@ -73,7 +72,6 @@ nav h1{
     border-radius: 5px;
     padding: 4px 15px;
 }
-/*efeito botão login (fundo branco, letras azuis*/
 .efect:hover{
    background-color: #FFFFFF;
     color: #326F92;
@@ -83,8 +81,6 @@ nav h1{
  .efect2{
     position: relative;
 }
-
-/*sub elemento de transição do sublinhado*/
 .efect2::after{
     content: " ";
     width: 0%;
@@ -94,7 +90,6 @@ nav h1{
     bottom: 0;
     left: 0;
     transition: 0.5s ease-in-out;
-    /*transition = para que não apareça de uma vez*/
 }
 .efect2:hover::after{
     width: 100%;
@@ -170,18 +165,18 @@ h2{
     border-radius: 20px;
  }
  .containerCard .card{
+    transition: 1s;
     text-align: center;
     color: black;
-    /*cores do conteudo do card*/
  }
  .containerCard .card .imgCard{
     width: auto;
     height: 213px;
-    /*tamanho da imagem*/
  }
  .containerCard .card .imgCard img{
     width: auto;
     height: 90%;
+    transition: 1s;
  }
  .containerCard .card .content{
     padding: 20px;
@@ -190,26 +185,18 @@ h2{
     font-family: 'Manrope', sans-serif;
         font-weight: 700;
         font-size: 1.5vw;
-/*padronização do conteude e letras do card*/
  }
  .containerCard .card:hover{
     background: rgba(3, 119, 155, 0.74);
     color: #FFFFFF;
     margin-top: -10px;
     transition: 0.6s;
-    /*cores na hora do efeito, e margin na hora do transição do efeito
-    transition = tempo para mudança no card
-    lembrar sempre que só vai acontecer com o mouse em cima do card*/
-
    
     
  }
  .containerCard .card:hover img {
      filter: invert(1);
     transition: 0.6s;
-
-    /*filter = inverter a cor, no caso de preto para branco, literalmente inverte
-    transition = tempo de transição da cor*/
    
    
      
