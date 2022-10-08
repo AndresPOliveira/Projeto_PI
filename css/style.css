@@ -203,7 +203,7 @@ h2{
  }
 /*Simulador*/
 #Simulador{
-    background-image: url(assets/Img-Fundo-DashBoard.svg);
+    background-image: url(assets_img/Img-Fundo-DashBoard.svg);
     background-size: cover;
     height: 100vh;
 }
