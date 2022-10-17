@@ -105,7 +105,7 @@
               <div class="containerKPI2">
                 <div class="textKPI">
                   <h1 class="title">
-                    Laboratórios com alerta de baixa umidade no momento
+                    Salas com alerta de alta umidade no momento
                   </h1>
                 </div>
                 <div class="imgKPI">
@@ -113,7 +113,7 @@
                 </div>
                 <div class="text2KPI">
                   <p class="textLegenda">
-                    Laboratório3, Laboratório4, Laboratório5
+                    Sala1, Sala2
                   </p>
                 </div>
               </div>
@@ -122,14 +122,14 @@
               <div class="containerKPI2">
                 <div class="textKPI">
                   <h1 class="title">
-                    Laboratórios com alerta de alta umidade no momento
+                    Salas com alerta de alta umidade no momento
                   </h1>
                 </div>
                 <div class="imgKPI">
                   <img src="assets/Img_Term_AltaUmidade.svg" alt="" />
                 </div>
                 <div class="text2KPI">
-                  <p class="textLegenda">Laboratório2, Laboratório3</p>
+                  <p class="textLegenda">Sala4, Sala5</p>
                 </div>
               </div>
             </div>
@@ -146,7 +146,7 @@
           <div class="grafico">
             <div
               class="chart-container"
-              style="position: relative; height: 35vh; width: 35vw">
+              style="position: relative; height: 23vh; width: 23vw; margin-bottom: 5px;margin-left: 80px;">
               <canvas id="myChart2"></canvas>
             </div>
           </div>
@@ -156,17 +156,18 @@
   </body>
   <script>
     const labels = [
-      "Laboratório 02",
-      "Laboratório 03",
-      "Laboratório 04",
-      "Laboratório 05",
+      "Sala1",
+      "Sala2",
+      "Sala4",
+      "Sala5",
+      
     ];
     const data = {
       labels: labels,
       datasets: [
         {
-          label: "Tempo em que o laboratório ficou em alerta (min)",
-          data: [30, 60, 20, 15],
+          label: "Duração do estado de alerta das salas de produção (min)",
+          data: [10, 20, 15, 30],
           backgroundColor: ["rgba(66, 120, 152, 0.6)"],
           borderColor: ["rgb(66, 120, 152)"],
           borderWidth: 1,
@@ -190,37 +191,25 @@
     const myChart = new Chart(document.getElementById("myChart"), config);
   </script>
   <script>
-    const labels2 = [
-      "Laboratório 01",
-      "Laboratório 02",
-      "Laboratório 03",
-      "Laboratório 04",
-      "Laboratório 05",
-    ];
     const data2 = {
-      labels: labels2,
-      datasets: [
-        {
-          label: "Frequência de alertas por laboratório (período de 7 dias)",
-          data: [1, 2, 6, 2, 4],
-          backgroundColor: ["rgb(52, 94, 119, 0.6)"],
-          borderColor: ["rgb(52, 94, 119)"],
-          borderWidth: 1,
-        },
-      ],
-    };
-
-    const config2 = {
-      type: "bar",
-      data: data2,
-      options: {  
-        scales: {
-          y: {
-            beginAtZero: true,
-          }
-        }
-      }
-    };
+  labels: [
+    'Salas em Alerta',
+    'Salas Normalizadas'
+  ],
+  datasets: [{
+    label: 'Percentual de salas em alerta',
+    data: [90,10],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+    ],
+    hoverOffset: 2
+  }]
+};
+const config2 = {
+  type: 'doughnut',
+  data: data2,
+};
   </script>
   <script>
     const myChart2 = new Chart(document.getElementById("myChart2"), config2);
