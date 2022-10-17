@@ -85,9 +85,9 @@
               <div class="legendasGra padrao">
                 <h2 class="title">Tolerância de tempo dos alertas</h2>
                 <p class="textLegenda">
-                  Abaixo de 2H perdas não significativas.<br />
-                  Entre 2H e 4H perdas significativas. <br />
-                  Acima de 4H perdas críticas.
+                  Abaixo de 60 min perdas não significativas.<br />
+                  Entre 60 min e 180 min perdas significativas. <br />
+                  Acima de 180 min perdas críticas.
                 </p>
               </div>
               <div class="legendasGra padrao">
@@ -165,7 +165,7 @@
       labels: labels,
       datasets: [
         {
-          label: "Tempo em que o labortório ficou em alerta (min)",
+          label: "Tem em que o laboratório ficou em alerta (min)",
           data: [30, 60, 20, 15],
           backgroundColor: ["#326F92"],
           borderColor: ["#326F92"],
@@ -201,7 +201,7 @@
       labels: labels2,
       datasets: [
         {
-          label: "Frequência dos alertas por laboratório (período de 7 dias)",
+          label: "Frequência de alertas por laboratório (período de 7 dias)",
           data: [1, 2, 3, 2, 4],
           backgroundColor: ["#427898"],
           borderColor: ["#427898"],
