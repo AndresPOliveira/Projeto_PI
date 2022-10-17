@@ -127,8 +127,11 @@ label{
 .span-logo {
     display: flex;
     align-items: center;
-    margin-top: 20px;
-    
+    margin-top: 20px; 
+}
+.span-logo .img-logo-gota{
+    width: auto;
+    height: 4vh;
 }
 
 h1 {

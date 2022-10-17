@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>DashBoard</title>
+    <link
+      rel="shortcut icon"
+      href="assets/Img_Icon_Logo.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/dashBoard.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <span class="span-logo"
+          ><h1>Fleming</h1>
+          <img
+            class="img-logo-gota"
+            src="assets/Img_Icon_Logo.png"
+            alt="logoGotas"
+        /></span>
+
+        <ul class="navbar">
+          <a href="cadastro.html" class="efect2"><li>Cadastrar Usuário</li></a>
+          <a href="cadastro_labs.html" class="efect2"><li>Cadastrar Lab</li></a>
+          <li>
+            <a href="#" class="efect2">Laboratórios</a>
+            <ul class="subMenu">
+              <li><a href="">Laboratório01</a></li>
+              <li><a href="">Laboratório02</a></li>
+              <li><a href="">Laboratório03</a></li>
+              <li><a href="">Laboratório04</a></li>
+              <li><a href="">Laboratório05</a></li>
+            </ul>
+          </li>
+          <li><a href="dashBoard.html" class="efect2">Home</a></li>
+          <a href="#"
+            ><li><img src="assets/Img_User.svg" alt="" /></li
+          ></a>
+        </ul>
+      </nav>
+    </header>
+    <section class="container section-container">
+      <div class="containerDash">
+        <div class="containerKPI">
+          <div class="legenda">
+            <div class="legendaAlertas">
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_BaixaUmidade.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Alerta crítico baixa umidade. Inferior a 42%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_UmidadeIdeal.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Umidade controlada. Ideal 53% a 52%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_AltaUmidade.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Alerta crítico alta umidade. superior a 62%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="legendaGrafico">
+              <div class="legendasGra padrao">
+                <h2 class="title">Tolerância de tempo dos alertas</h2>
+                <p class="textLegenda">
+                  Abaixo de 2H perdas não significativas.<br />
+                  Entre 2H e 4H perdas significativas. <br />
+                  Acima de 4H perdas críticas.
+                </p>
+              </div>
+              <div class="legendasGra padrao">
+                <h2 class="title">Frequência dos alertas</h2>
+                <p class="textLegenda textLegenda2">
+                  Aceitável. Abaixo de 6 alertas por laboratório na semana.<br />
+                  Emergência. Entre 6 a 8 alertar na semana. <br />
+                  Crítico. Acima de 8 alertas na semana.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="kpis">
+            <div class="kpi padrao">
+              <div class="containerKPI2">
+                <div class="textKPI">
+                  <h1 class="title">
+                    Laboratórios com alerta de baixa umidade no momento
+                  </h1>
+                </div>
+                <div class="imgKPI">
+                  <img src="assets/Img_Term_BaixaUmidade.svg" alt="" />
+                </div>
+                <div class="text2KPI">
+                  <p class="textLegenda">
+                    Laboratório3, Laboratório4, Laboratório5
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="kpi padrao">
+              <div class="containerKPI2">
+                <div class="textKPI">
+                  <h1 class="title">
+                    Laboratórios com alerta de alta umidade no momento
+                  </h1>
+                </div>
+                <div class="imgKPI">
+                  <img src="assets/Img_Term_AltaUmidade.svg" alt="" />
+                </div>
+                <div class="text2KPI">
+                  <p class="textLegenda">Laboratório2, Laboratório3</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerGraficos">
+          <div class="grafico">
+            <div
+              class="chart-container"
+              style="position: relative; height: 40vh; width: 40vw">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+          <div class="grafico">
+            <div
+              class="chart-container"
+              style="position: relative; height: 40vh; width: 40vw">
+              <canvas id="myChart2"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const labels = [
+      "Laboratório 02",
+      "Laboratório 03",
+      "Laboratório 04",
+      "Laboratório 05",
+    ];
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          label: "Tempo em que o labortório ficou em alerta (min)",
+          data: [30, 60, 20, 15],
+          backgroundColor: ["#326F92"],
+          borderColor: ["#326F92"],
+          borderWidth: 1,
+        },
+      ],
+    };
+
+    const config = {
+      type: "bar",
+      data: data,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    };
+  </script>
+  <script>
+    const myChart = new Chart(document.getElementById("myChart"), config);
+  </script>
+  <script>
+    const labels2 = [
+      "Laboratório 01",
+      "Laboratório 02",
+      "Laboratório 03",
+      "Laboratório 04",
+      "Laboratório 05",
+    ];
+    const data2 = {
+      labels: labels2,
+      datasets: [
+        {
+          label: "Frequência dos alertas por laboratório (período de 7 dias)",
+          data: [1, 2, 3, 2, 4],
+          backgroundColor: ["#427898"],
+          borderColor: ["#427898"],
+          borderWidth: 1,
+        },
+      ],
+    };
+
+    const config2 = {
+      type: "bar",
+      data: data2,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    };
+  </script>
+  <script>
+    const myChart2 = new Chart(document.getElementById("myChart2"), config2);
+  </script>
+</html>
