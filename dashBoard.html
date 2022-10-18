@@ -26,19 +26,21 @@
         /></span>
 
         <ul class="navbar">
-          <a href="cadastro.html" class="efect2"><li>Cadastrar Usuário</li></a>
-          <a href="cadastro_labs.html" class="efect2"><li>Cadastrar Lab</li></a>
+          <a href="cadastro.html"><li>Cadastrar Usuário</li></a>
+          <a href="cadastro_labs.html"><li>Cadastrar Lab</li></a>
           <li>
-            <a href="#" class="efect2">Laboratórios</a>
+            <a href="#">Laboratórios</a>
             <ul class="subMenu">
-              <li><a href="">Laboratório01</a></li>
-              <li><a href="">Laboratório02</a></li>
-              <li><a href="">Laboratório03</a></li>
-              <li><a href="">Laboratório04</a></li>
-              <li><a href="">Laboratório05</a></li>
+              <li><a href="dashBoardLab.html">Laboratório01</a></li>
+              <li><a href="dashBoardLab.html">Laboratório02</a></li>
+              <li><a href="dashBoardLab.html">Laboratório03</a></li>
+              <li><a href="dashBoardLab.html">Laboratório04</a></li>
+              <li><a href="dashBoardLab.html">Laboratório05</a></li>
             </ul>
           </li>
-          <li><a href="dashBoard.html" class="efect2">Home</a></li>
+          <li>
+            <a href="dashBoard.html" style="color: black">Home</a>
+          </li>
           <a href="#"
             ><li><img src="assets/Img_User.svg" alt="" /></li
           ></a>
@@ -203,8 +205,8 @@
         {
           label: "Frequência de alertas por laboratório (período de 7 dias)",
           data: [1, 2, 6, 2, 4],
-          backgroundColor: ["rgb(52, 94, 119, 0.6)"],
-          borderColor: ["rgb(52, 94, 119)"],
+          backgroundColor: ["rgb(65, 135, 139, 0.6)"],
+          borderColor: ["rgb(65, 135, 139)"],
           borderWidth: 1,
         },
       ],
@@ -213,13 +215,13 @@
     const config2 = {
       type: "bar",
       data: data2,
-      options: {  
+      options: {
         scales: {
           y: {
             beginAtZero: true,
-          }
-        }
-      }
+          },
+        },
+      },
     };
   </script>
   <script>

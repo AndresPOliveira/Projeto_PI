@@ -26,11 +26,26 @@
         /></span>
 
         <ul class="navbar">
-          <a href="cadastro.html" class="efect2"><li>Cadastrar Usuário</li></a>
-          <a href="cadastro_labs.html" class="efect2"><li>Cadastrar Lab</li></a>
+          <a href="cadastro.html"><li>Cadastrar Usuário</li></a>
+          <a href="cadastro_labs.html"><li>Cadastrar Lab</li></a>
           <li>
-            <a href="#" class="efect2">Laboratórios</a>
-            <ul class="subMenu">
+            <a href="#">Salas</a>
+            <ul>
+              <li><a href="">Sala01</a></li>
+              <li><a href="">Sala02</a></li>
+              <li><a href="">Sala03</a></li>
+              <li><a href="">Sala04</a></li>
+              <li><a href="">Sala05</a></li>
+              <li><a href="">Sala06</a></li>
+              <li><a href="">Sala07</a></li>
+              <li><a href="">Sala08</a></li>
+              <li><a href="">Sala09</a></li>
+              <li><a href="">Sala10</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" style="color: black">Laboratórios</a>
+            <ul>
               <li><a href="">Laboratório01</a></li>
               <li><a href="">Laboratório02</a></li>
               <li><a href="">Laboratório03</a></li>
@@ -38,7 +53,7 @@
               <li><a href="">Laboratório05</a></li>
             </ul>
           </li>
-          <li><a href="dashBoard.html" class="efect2">Home</a></li>
+          <li><a href="dashBoard.html">Home</a></li>
           <a href="#"
             ><li><img src="assets/Img_User.svg" alt="" /></li
           ></a>
@@ -90,14 +105,6 @@
                   Acima de 180 min perdas críticas.
                 </p>
               </div>
-              <div class="legendasGra padrao">
-                <h2 class="title">Frequência dos alertas</h2>
-                <p class="textLegenda textLegenda2">
-                  Aceitável. Abaixo de 6 alertas por laboratório na semana.<br />
-                  Emergência. Entre 6 a 8 alertar na semana. <br />
-                  Crítico. Acima de 8 alertas na semana.
-                </p>
-              </div>
             </div>
           </div>
           <div class="kpis">
@@ -112,9 +119,7 @@
                   <img src="assets/Img_Term_BaixaUmidade.svg" alt="" />
                 </div>
                 <div class="text2KPI">
-                  <p class="textLegenda">
-                    Sala1, Sala2
-                  </p>
+                  <p class="textLegenda">Sala1, Sala2</p>
                 </div>
               </div>
             </div>
@@ -146,7 +151,13 @@
           <div class="grafico">
             <div
               class="chart-container"
-              style="position: relative; height: 23vh; width: 23vw; margin-bottom: 5px;margin-left: 80px;">
+              style="
+                position: relative;
+                height: 23vh;
+                width: 20vw;
+                margin-bottom: 5px;
+                margin-left: 80px;
+              ">
               <canvas id="myChart2"></canvas>
             </div>
           </div>
@@ -155,13 +166,7 @@
     </section>
   </body>
   <script>
-    const labels = [
-      "Sala1",
-      "Sala2",
-      "Sala4",
-      "Sala5",
-      
-    ];
+    const labels = ["Sala1", "Sala2", "Sala4", "Sala5"];
     const data = {
       labels: labels,
       datasets: [
@@ -192,24 +197,23 @@
   </script>
   <script>
     const data2 = {
-  labels: [
-    'Salas em Alerta',
-    'Salas Normalizadas'
-  ],
-  datasets: [{
-    label: 'Percentual de salas em alerta',
-    data: [90,10],
-    backgroundColor: [
-      'rgb(255, 99, 132)',
-      'rgb(54, 162, 235)',
-    ],
-    hoverOffset: 2
-  }]
-};
-const config2 = {
-  type: 'doughnut',
-  data: data2,
-};
+      labels: [
+        "Quantidade de Salas em Alerta",
+        "Quantidade de Salas Normalizadas",
+      ],
+      datasets: [
+        {
+          label: "Percentual de salas em alerta",
+          data: [4, 6],
+          backgroundColor: ["rgb(255, 99, 132)", "rgb(66, 120, 152)"],
+          hoverOffset: 1,
+        },
+      ],
+    };
+    const config2 = {
+      type: "doughnut",
+      data: data2,
+    };
   </script>
   <script>
     const myChart2 = new Chart(document.getElementById("myChart2"), config2);
