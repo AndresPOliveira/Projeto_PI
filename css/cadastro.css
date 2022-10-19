@@ -54,8 +54,13 @@
     margin: auto;
 }
 .container .buttonContinuar:hover{
-  
-        background-color: #345E77;
+  background-color: #345E77;
+}
+.container3 {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
 }
 input{
     border-radius: 15px;
