@@ -1,0 +1,71 @@
+.title2{
+    font-size: 1.5vw;
+}
+.kpis .kpi{
+    height: 45vh;
+}
+
+.imgKPI img {
+    width: auto;
+    height: 12vh;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/*Modal*/
+.modal {
+
+    width: 95vw;
+    height: 70vh;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: animate;
+    animation-duration: 800ms;
+}
+.containerModal{
+    width: 95vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerModal .imgSalas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+.containerModal .imgSalas img{
+    width: auto;
+    height: 65vh;
+}
+@keyframes animate {
+    
+    from {
+        opacity: 1;
+    }
+
+    from {
+        opacity: 0;
+    }
+}
+
+
+.fechar {
+
+    width: auto;
+    height: 10vh;
+    float: right;
+    cursor: pointer;
+    padding: 10px;
+}
+.fechar img{
+    width: auto;
+    height: 2.5vh;
+}
