@@ -7,6 +7,7 @@
    <link rel="shortcut icon" href="assets/Img_Icon_Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/loginStyle.css" />
     <script src="script/validarLogin.js"></script>
+    <script src="script/modal.js"></script>
     <title>Fleming</title>
   </head>
   <body>
@@ -33,10 +34,25 @@
             <input type="password" placeholder="*********"  id="senha"/>
           </div>
           <div class="buttonLogin" onclick="validarLogin()"><a href="#" id="conectar">Conectar</a></div>
-          <p>Não é nosso cliente?<span class="linkCadastro"><a href="#"> Clique aqui</a></span></p>
+          <p>Não é nosso cliente?<span class="linkCadastro" onclick="acao()"><a href="#"> Clique aqui</a></span></p>
           
         </div>
-
+        <div class="modal">
+          <div onclick="fechar()" class="fechar">
+            <img src="assets/Img_close.svg" alt="" />
+          </div>
+          <div class="containerModal">
+            <div class="contatoArea">
+              <span>Informe o nome para contato:</span>
+              <input type="text" id="nome">
+              <span>Informe o email para contato:</span>
+              <input type="email" id="email">
+              <span>Informe as principais duvidas para melhorar o contato:</span>
+              <textarea name="" id="pergunta" cols="50" rows="6"></textarea>
+              <div onclick="fechar()" class="fechar"><span>Enviar</span></div>
+            </div>
+          </div>
+        </div>
       </div>
       </div>
         
