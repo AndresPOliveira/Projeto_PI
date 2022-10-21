@@ -26,21 +26,19 @@
         /></span>
 
         <ul class="navbar">
-          <a href="index.html">Sair</a>
-          <a href="cadastro.html"><li>Cadastrar Usuário</li></a>
           <li>
             <a href="#">Salas</a>
             <ul>
-              <li><a href="">Sala01</a></li>
-              <li><a href="">Sala02</a></li>
-              <li><a href="">Sala03</a></li>
-              <li><a href="">Sala04</a></li>
-              <li><a href="">Sala05</a></li>
-              <li><a href="">Sala06</a></li>
-              <li><a href="">Sala07</a></li>
-              <li><a href="">Sala08</a></li>
-              <li><a href="">Sala09</a></li>
-              <li><a href="">Sala10</a></li>
+              <li><a href="dashBoardSala.html">Sala01</a></li>
+              <li><a href="dashBoardSala.html">Sala02</a></li>
+              <li><a href="dashBoardSala.html">Sala03</a></li>
+              <li><a href="dashBoardSala.html">Sala04</a></li>
+              <li><a href="dashBoardSala.html">Sala05</a></li>
+              <li><a href="dashBoardSala.html">Sala06</a></li>
+              <li><a href="dashBoardSala.html">Sala07</a></li>
+              <li><a href="dashBoardSala.html">Sala08</a></li>
+              <li><a href="dashBoardSala.html">Sala09</a></li>
+              <li><a href="dashBoardSala.html">Sala10</a></li>
             </ul>
           </li>
           <li>
@@ -54,11 +52,24 @@
             </ul>
           </li>
           <li><a href="dashBoard.html">Home</a></li>
-          <a href="#"
-            >
+          <a href="#">
             <a href="#"> Olá, Usuário</a>
-            <li><img src="assets/Img_User.svg" alt="" /></li
-          ></a>
+            <li>
+              <img src="assets/Img_User.svg" alt="" />
+              <ul>
+                <li>
+                  <a href="cadastro.html" style="font-size: 0.7vw; padding: 5px"
+                    >Cadastrar Usuário</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html" style="font-size: 0.7vw; padding: 5px"
+                    >Sair</a
+                  >
+                </li>
+              </ul>
+            </li></a
+          >
         </ul>
       </nav>
     </header>
@@ -114,7 +125,7 @@
               <div class="containerKPI2">
                 <div class="textKPI">
                   <h1 class="title">
-                    Salas com alerta de alta umidade no momento
+                    Salas com alerta de baixa umidade no momento
                   </h1>
                 </div>
                 <div class="imgKPI">
@@ -150,16 +161,8 @@
               <canvas id="myChart"></canvas>
             </div>
           </div>
-          <div class="grafico">
-            <div
-              class="chart-container"
-              style="
-                position: relative;
-                height: 23vh;
-                width: 20vw;
-                margin-bottom: 5px;
-                margin-left: 80px;
-              ">
+          <div class="grafico" style="display: flex; justify-content: center">
+            <div style="height: 18vh; width: 18vw">
               <canvas id="myChart2"></canvas>
             </div>
           </div>
@@ -174,7 +177,7 @@
       datasets: [
         {
           label: "Duração do estado de alerta das salas de produção (min)",
-          data: [10, 20, 15, 30],
+          data: [10, 20, 65, 70],
           backgroundColor: ["rgba(66, 120, 152, 0.6)"],
           borderColor: ["rgb(66, 120, 152)"],
           borderWidth: 1,

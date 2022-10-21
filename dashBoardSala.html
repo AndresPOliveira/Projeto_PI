@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script/modal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>DashBoard</title>
+    <link
+      rel="shortcut icon"
+      href="assets/Img_Icon_Logo.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashBoard.css" />
+    <link rel="stylesheet" href="css/dashBoardSala.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <span class="span-logo"
+          ><h1>Fleming</h1>
+          <img
+            class="img-logo-gota"
+            src="assets/Img_Icon_Logo.png"
+            alt="logoGotas"
+        /></span>
+
+        <ul class="navbar">
+          <li>
+            <a href="#" style="color: black">Salas</a>
+            <ul>
+              <li><a href="">Sala01</a></li>
+              <li><a href="">Sala02</a></li>
+              <li><a href="">Sala03</a></li>
+              <li><a href="">Sala04</a></li>
+              <li><a href="">Sala05</a></li>
+              <li><a href="">Sala06</a></li>
+              <li><a href="">Sala07</a></li>
+              <li><a href="">Sala08</a></li>
+              <li><a href="">Sala09</a></li>
+              <li><a href="">Sala10</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">Laboratórios</a>
+            <ul>
+              <li><a href="dashBoardLab.html">Laboratório01</a></li>
+              <li><a href="dashBoardLab.html">Laboratório02</a></li>
+              <li><a href="dashBoardLab.html">Laboratório03</a></li>
+              <li><a href="dashBoardLab.html">Laboratório04</a></li>
+              <li><a href="dashBoardLab.html">Laboratório05</a></li>
+            </ul>
+          </li>
+          <li><a href="dashBoard.html">Home</a></li>
+          <a href="#">
+            <a href="#"> Olá, Usuário</a>
+            <li>
+              <img src="assets/Img_User.svg" alt="" />
+              <ul>
+                <li>
+                  <a href="cadastro.html" style="font-size: 0.7vw; padding: 5px"
+                    >Cadastrar Usuário</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html" style="font-size: 0.7vw; padding: 5px"
+                    >Sair</a
+                  >
+                </li>
+              </ul>
+            </li></a
+          >
+        </ul>
+      </nav>
+    </header>
+    <section class="container section-container">
+      <div class="containerDash">
+        <div class="containerKPI">
+          <div class="legenda">
+            <div class="legendaAlertas">
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_AltaUmidade1.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Alerta alta umidade. 62%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_AceitavelUmidade.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Umidade aceitável. 46%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_BaixaUmidade1.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Alerta baixa umidade. 43%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="legendaAlertas">
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_AltaUmidade2.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Emergência alta umidade. 64%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_UmidadeIdeal.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Umidade controlada. Ideal 53% a 52%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_BaixaUmidade2.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Emergência baixa umidade. 41%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="legendaAlertas">
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_AltaUmidade.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Alerta crítico alta umidade. 65%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_AceitavelUmidade.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Umidade aceitável. 59%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="legendaAler padrao">
+                <div class="card">
+                  <div class="imgAler">
+                    <img src="assets/Img_Term_BaixaUmidade.svg" alt="" />
+                  </div>
+                  <div class="textAler">
+                    <p>Alerta crítico baixa umidade. 40%</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="kpis">
+            <div class="kpi padrao" onclick="acao()" style="cursor: pointer">
+              <div class="containerKPI2">
+                <div class="textKPI">
+                  <h1 class="title title2">Máxima umidade no dia</h1>
+                </div>
+                <div class="imgKPI">
+                  <img src="assets/Img_Term_AltaUmidade1.svg" alt="" />
+                </div>
+                <h1 class="title title2">62%</h1>
+                <div class="text2KPI">
+                  <p class="textLegenda title2">Área A</p>
+                </div>
+              </div>
+            </div>
+            <div class="kpi padrao" onclick="acao()" style="cursor: pointer">
+              <div class="containerKPI2">
+                <div class="textKPI">
+                  <h1 class="title title2">Mínima umidade no dia</h1>
+                </div>
+                <div class="imgKPI">
+                  <img src="assets/Img_Term_UmidadeIdeal.svg" alt="" />
+                </div>
+                <h1 class="title title2">53%</h1>
+                <div class="text2KPI">
+                  <p class="textLegenda title2">Área E</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal">
+        <div onclick="fechar()" class="fechar">
+          <img src="assets/Img_close.svg" alt="" />
+        </div>
+        <div class="containerModal">
+          <div class="imgSalas">
+            <img src="assets/Img_SalaDeProdução.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+    const labels = ["January", "February", "March", "April", "May", "June"];
+
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          label: "My First dataset",
+          backgroundColor: "rgb(255, 99, 132)",
+          borderColor: "rgb(255, 99, 132)",
+          data: [0, 10, 5, 2, 20, 30, 45],
+        },
+      ],
+    };
+
+    const config = {
+      type: "line",
+      data: data,
+      options: {},
+    };
+  </script>
+  <script>
+    const myChart = new Chart(document.getElementById("myChart"), config);
+  </script>
+</html>

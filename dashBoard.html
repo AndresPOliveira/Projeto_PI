@@ -26,8 +26,6 @@
         /></span>
 
         <ul class="navbar">
-          <a href="index.html">Sair</a>
-          <a href="cadastro.html"><li>Cadastrar Usuário</li></a>
           <li>
             <a href="#">Laboratórios</a>
             <ul class="subMenu">
@@ -40,12 +38,26 @@
           </li>
           <li>
             <a href="dashBoard.html" style="color: black">Home </a>
-            
           </li>
-          <a href="#"> Olá, Usuário</a>
-          <a href="#"
-            ><li><img src="assets/Img_User.svg" alt="" /></li
-          ></a>
+
+          <a href="#">
+            <a href="#"> Olá, Usuário</a>
+            <li>
+              <img src="assets/Img_User.svg" alt="" />
+              <ul>
+                <li>
+                  <a href="cadastro.html" style="font-size: 0.7vw; padding: 5px"
+                    >Cadastrar Usuário</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html" style="font-size: 0.7vw; padding: 5px"
+                    >Sair</a
+                  >
+                </li>
+              </ul>
+            </li></a
+          >
         </ul>
       </nav>
     </header>
@@ -207,7 +219,7 @@
         {
           label: "Frequência de alertas por laboratório (período de 7 dias)",
           data: [1, 2, 6, 2, 4],
-          backgroundColor: ["rgb(65, 135, 139, 0.6)"],
+          backgroundColor: ["rgb(65, 135, 139)"],
           borderColor: ["rgb(65, 135, 139)"],
           borderWidth: 1,
         },
