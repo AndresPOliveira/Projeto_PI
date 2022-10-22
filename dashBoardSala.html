@@ -75,7 +75,7 @@
         </ul>
       </nav>
     </header>
-    <section class="container section-container containerBlock">
+    <section class="container section-container section-container">
       <div class="containerDash">
         <div class="containerKPI">
           <div class="legenda">
@@ -223,8 +223,9 @@
     <section class="container section-container cont-graf">
       <div class="containerGraficosSala">
         <div class="cardGraficos">
-          <h2 class="title">
-            Umidade das áreas na sala de produção (periodo de 45Min)
+          <h2 class="title" style="font-size: 1.5vw">
+            Monitoramento da umidade nas áreas localizadas na sala de produção
+            (período de 45Min)
           </h2>
         </div>
       </div>
@@ -245,21 +246,26 @@
             <canvas id="myChart4"></canvas>
           </div>
         </div>
-        <div class="container-Graf">
-          <div class="chart-container" style="height: 38vh; width: 38vw">
-            <canvas id="myChart5"></canvas>
-          </div>
-        </div>
       </div>
     </section>
     <section class="container section-container cont-graf">
+      <div class="container-Graf">
+        <div class="chart-container" style="height: 38vh; width: 38vw">
+          <canvas id="myChart5"></canvas>
+        </div>
+      </div>
       <div class="containerGraficosSala">
-        <div class="cardGraficos">
+        <div class="cardGraficos" style="margin-top: 80px">
           <h2 class="title">
-            Áreas com umidade fora do aceitável no momento (periodo Min)
+            Áreas com umidade fora do aceitável no momento (período Min)
           </h2>
           <h2 class="title">Área A, Área B, Área C</h2>
           <p class="titleGraf">Umidade aceitável entre 46% a 59%</p>
+        </div>
+        <div class="container-Graf">
+          <div class="chart-container" style="height: 45vh; width: 45vw">
+            <canvas id="myChart7"></canvas>
+          </div>
         </div>
       </div>
     </section>
@@ -267,9 +273,14 @@
       <div class="containerGraficosSala">
         <div class="cardGraficos">
           <h2 class="title">
-            Variação da umidade nas áreas da sala de produção (periodo de 24H)
+            Variação da umidade nas áreas da sala de produção (período de 24H)
           </h2>
           <p class="titleGraf">Variação deve ser de até no máximo 5</p>
+        </div>
+        <div class="container-Graf">
+          <div class="chart-container" style="height: 45vh; width: 45vw">
+            <canvas id="myChart6"></canvas>
+          </div>
         </div>
       </div>
     </section>
@@ -454,5 +465,81 @@
   </script>
   <script>
     const myChart5 = new Chart(document.getElementById("myChart5"), config5);
+  </script>
+  <script>
+    const labels6 = ["22/10/2022", "23/10/2022"];
+    const data6 = {
+      labels: labels6,
+      datasets: [
+        {
+          label: "Area A",
+          backgroundColor: "#00FF66",
+          borderColor: "#00FF66",
+          data: [53, 50],
+        },
+        {
+          label: "Area B",
+          backgroundColor: "#084B99",
+          borderColor: "#084B99",
+          data: [48, 60],
+        },
+        {
+          label: "Area C",
+          backgroundColor: "#40C89F",
+          borderColor: "#40C89F",
+          data: [47, 50],
+        },
+        {
+          label: "Area D",
+          backgroundColor: "#B5D0E0",
+          borderColor: "#B5D0E0",
+          data: [67, 60],
+        },
+        {
+          label: "Area E",
+          backgroundColor: "#345E77",
+          borderColor: "#345E77",
+          data: [55, 50],
+        },
+      ],
+    };
+    const config6 = {
+      type: "bar",
+      data: data6,
+      options: {},
+    };
+  </script>
+  <script>
+    const myChart6 = new Chart(document.getElementById("myChart6"), config6);
+  </script>
+  <script>
+    const labels7 = ["Área A", "Área B", "Área C"];
+    const data7 = {
+      labels: labels7,
+      datasets: [
+        {
+          label: "Tempo em que a área ficou fora do padrão (min)",
+          data: [30, 45, 65, 70],
+          backgroundColor: ["rgba(66, 120, 152, 0.6)"],
+          borderColor: ["rgb(66, 120, 152)"],
+          borderWidth: 1,
+        },
+      ],
+    };
+
+    const config7 = {
+      type: "bar",
+      data: data7,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+      },
+    };
+  </script>
+  <script>
+    const myChart7 = new Chart(document.getElementById("myChart7"), config7);
   </script>
 </html>

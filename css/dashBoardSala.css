@@ -74,6 +74,7 @@
 .containerGraficosSala{
     display: flex;
     flex-direction: column;
+    height: 50vh;
 }
 .containerGraficosSala .cardGraficos{
     width: 50vw;
@@ -109,6 +110,7 @@
 .containerGrafico{
     width: auto;
     height: 80vh;
+    
     display: flex;
     flex-direction: column;
     
@@ -118,11 +120,22 @@
     height: 80vh;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    
+   
 }
 .chart-container{
     background-color: #deeaf1;
-    border: solid 2px #345E77;
+    border: solid 1px #345E77;
         border-radius: 5px;
-        padding: 16px;
+        padding: 20px;
+}
+.section-container1{
+    height: 100vh;
+}
+
+.cont-graf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
