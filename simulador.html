@@ -62,9 +62,7 @@
   </body>
   <script>
     function calc() {
-      document.getElementById("primeira").style.display = "none";
-      document.getElementById("segunda").style.display = "block";
-      var qtdComprimidos = quantidadeComprimidos.value;
+      var qtdComprimidos = Number(quantidadeComprimidos.value);
       var perdidos = qtdComprimidos * 0.15;
       var remedio = tpRemedio.value;
       var cusProducao = 0;
@@ -73,7 +71,13 @@
       var Z = 0.67;
       var perdas = 0;
 
-      if (remedio == "Oxicodona") {
+      if (qtdComprimidos == 0 || remedio == "") {
+        alert("Preencha todos os campos");
+      } else {
+      document.getElementById("primeira").style.display = "none";
+      document.getElementById("segunda").style.display = "block";
+
+        if (remedio == "Oxicodona") {
         cusProducao = X * qtdComprimidos;
         perdas = perdidos * X;
       } else if (remedio == "Metadona") {
@@ -82,8 +86,6 @@
       } else if (remedio == "Hidromorfona") {
         cusProducao = Z * qtdComprimidos;
         perdas = perdidos * Z;
-      } else {
-        alert("Preencha todos os campos");
       }
 
       resposta.innerHTML = `
@@ -95,6 +97,9 @@
       2
     )}</b><br>    
     `;
+
+      }
+
     }
   </script>
 </html>
