@@ -75,7 +75,7 @@
         </ul>
       </nav>
     </header>
-    <section class="container section-container">
+    <section class="container section-container containerBlock">
       <div class="containerDash">
         <div class="containerKPI">
           <div class="legenda">
@@ -208,6 +208,7 @@
           </div>
         </div>
       </div>
+
       <div class="modal">
         <div onclick="fechar()" class="fechar">
           <img src="assets/Img_close.svg" alt="" />
@@ -219,18 +220,82 @@
         </div>
       </div>
     </section>
+    <section class="container section-container cont-graf">
+      <div class="containerGraficosSala">
+        <div class="cardGraficos">
+          <h2 class="title">
+            Umidade das áreas na sala de produção (periodo de 45Min)
+          </h2>
+        </div>
+      </div>
+      <div class="containerGrafico">
+        <div class="container-Graf">
+          <div class="chart-container" style="height: 35vh; width: 35vw">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="chart-container" style="height: 35vh; width: 35vw">
+            <canvas id="myChart2"></canvas>
+          </div>
+        </div>
+        <div class="container-Graf">
+          <div class="chart-container" style="height: 35vh; width: 35vw">
+            <canvas id="myChart3"></canvas>
+          </div>
+          <div class="chart-container" style="height: 35vh; width: 35vw">
+            <canvas id="myChart4"></canvas>
+          </div>
+        </div>
+        <div class="container-Graf">
+          <div class="chart-container" style="height: 38vh; width: 38vw">
+            <canvas id="myChart5"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container section-container cont-graf">
+      <div class="containerGraficosSala">
+        <div class="cardGraficos">
+          <h2 class="title">Áreas com umidade fora do aceitável no momento</h2>
+          <h2 class="title">Área A, Área B, Área C</h2>
+          <p class="titleGraf">Umidade aceitável entre 46% a 59%</p>
+        </div>
+      </div>
+    </section>
+    <section class="container section-container">
+      <div class="containerGraficosSala">
+        <div class="cardGraficos">
+          <h2 class="title">
+            Variação da umidade nas áreas da sala de produção (periodo de 24H)
+          </h2>
+          <p class="titleGraf">Variação deve ser de até no máximo 5</p>
+        </div>
+      </div>
+    </section>
   </body>
   <script>
-    const labels = ["January", "February", "March", "April", "May", "June"];
+    const labels = [
+      "10:00",
+      "10:45",
+      "11:30",
+      "12:15",
+      "13:00",
+      "13:45",
+      "14:30",
+      "15:15",
+      "16:00",
+      "16:45",
+      "17:30",
+      "18:15",
+    ];
 
     const data = {
       labels: labels,
       datasets: [
         {
-          label: "My First dataset",
-          backgroundColor: "rgb(255, 99, 132)",
-          borderColor: "rgb(255, 99, 132)",
-          data: [0, 10, 5, 2, 20, 30, 45],
+          label: "Area A",
+          backgroundColor: "#00FF66",
+          borderColor: "#00FF66",
+          data: [53, 50, 55, 52, 56, 57, 52, 58, 60, 62, 64, 60],
         },
       ],
     };
@@ -243,5 +308,149 @@
   </script>
   <script>
     const myChart = new Chart(document.getElementById("myChart"), config);
+  </script>
+  <script>
+    const labels1 = [
+      "10:00",
+      "10:45",
+      "11:30",
+      "12:15",
+      "13:00",
+      "13:45",
+      "14:30",
+      "15:15",
+      "16:00",
+      "16:45",
+      "17:30",
+      "18:15",
+    ];
+
+    const data2 = {
+      labels: labels1,
+      datasets: [
+        {
+          label: "Area B",
+          backgroundColor: "#084B99",
+          borderColor: "#084B99",
+          data: [45, 30, 52, 55, 52, 54, 50, 53, 55, 52, 53, 56],
+        },
+      ],
+    };
+    const config2 = {
+      type: "line",
+      data: data2,
+      options: {},
+    };
+  </script>
+  <script>
+    const myChart2 = new Chart(document.getElementById("myChart2"), config2);
+  </script>
+  <script>
+    const labels3 = [
+      "10:00",
+      "10:45",
+      "11:30",
+      "12:15",
+      "13:00",
+      "13:45",
+      "14:30",
+      "15:15",
+      "16:00",
+      "16:45",
+      "17:30",
+      "18:15",
+    ];
+
+    const data3 = {
+      labels: labels,
+      datasets: [
+        {
+          label: "Area C",
+          backgroundColor: "#40C89F",
+          borderColor: "#40C89F",
+          data: [53, 53, 54, 55, 55, 50, 54, 53, 55, 52, 53, 50],
+        },
+      ],
+    };
+    const config3 = {
+      type: "line",
+      data: data3,
+      options: {},
+    };
+  </script>
+  <script>
+    const myChart3 = new Chart(document.getElementById("myChart3"), config3);
+  </script>
+  <script>
+    const labels4 = [
+      "10:00",
+      "10:45",
+      "11:30",
+      "12:15",
+      "13:00",
+      "13:45",
+      "14:30",
+      "15:15",
+      "16:00",
+      "16:45",
+      "17:30",
+      "18:15",
+    ];
+
+    const data4 = {
+      labels: labels4,
+      datasets: [
+        {
+          label: "Area D",
+          backgroundColor: "#B5D0E0",
+          borderColor: "#B5D0E0",
+          data: [65, 64, 65, 62, 55, 63, 55, 53, 55, 52, 53, 51],
+        },
+      ],
+    };
+    const config4 = {
+      type: "line",
+      data: data4,
+      options: {},
+    };
+  </script>
+  <script>
+    const myChart4 = new Chart(document.getElementById("myChart4"), config4);
+  </script>
+  <script>
+    const labels5 = [
+      "10:00",
+      "10:45",
+      "11:30",
+      "12:15",
+      "13:00",
+      "13:45",
+      "14:30",
+      "15:15",
+      "16:00",
+      "16:45",
+      "17:30",
+      "18:15",
+    ];
+
+    const data5 = {
+      labels: labels5,
+      datasets: [
+        {
+          label: "Area E",
+          backgroundColor: "#345E77",
+          borderColor: "#345E77",
+          data: [52, 45, 45, 40, 50, 45, 53, 55, 52, 53, 50],
+        },
+      ],
+    };
+    const config5 = {
+      type: "line",
+      data: data5,
+      options: {},
+    };
+  </script>
+  <script>
+    const myChart5 = new Chart(document.getElementById("myChart5"), config5);
   </script>
 </html>

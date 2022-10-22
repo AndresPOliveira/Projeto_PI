@@ -141,15 +141,21 @@ nav ul ul li a{
 }
 
 .containerGraficos .grafico {
-    width: 35vw;
-    height: 35vh;
-    margin-top: 50px;
+    width: 40vw;
+    height: 40vh;
+    margin-top: 20px;
     margin-right: 50px;
     margin-left: 50px;
     background-color: #deeaf1;
     border: solid 2px #345E77;
     border-radius: 9px;
+   
+    justify-content: center;
     
+}
+.chart-container{
+    margin: auto;
+   
 }
 .textAler{
     font-family: 'Roboto';
