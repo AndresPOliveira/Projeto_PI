@@ -22,7 +22,6 @@ function validarCadastro() {
     } else if(Number.isNaN(telCel)){
         alert('Numero celular invalido')
     } else {
-        outroCadastro.href = "cadastro.html";
-        cadastro.href = "dashBoard.html";
+        cadastro.href = "login.html";
     }
 }
