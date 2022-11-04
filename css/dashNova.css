@@ -212,8 +212,8 @@ h2{
 }
 .final1{
     /* border: solid black 3px; */
-    width: 12vw;
-    height: 10vh;
+    width: 22vw;
+    height: 12vh;
     background-color: #417096;
     border-radius: 5px;
     display: flex;
@@ -223,8 +223,8 @@ h2{
 }
 .final2{
     /* border: solid black 3px; */
-    width: 12vw;
-    height: 10vh;
+    width: 22vw;
+    height: 12vh;
     background-color: #417096;
     border-radius: 5px;
     flex-direction: column;
