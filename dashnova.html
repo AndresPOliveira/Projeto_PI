@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dashBoard.css".css>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashNova.css">
     <title>Document</title>
 </head>
 <body>
@@ -59,47 +60,86 @@
         <div class="legendas">
           <div class="caixaLegenda">
             <div class="textoLegenda">
-               <span>LEGENDA</span>
+               <span>LEGENDAS</span>
             </div>
           </div>
           <div class="container">
             <div class="legenda1">
              <span>Crítico</span>
              <span>Baixa Umidade</span>
-             <img src="assets/dashnova/TermoVermelho.png" alt="">
+             <img class='imgs' src="assets/dashnova/TermoVermelho" alt="">
              <span>40%</span>
             </div>
             <div class="legenda2">
               <span>Alerta</span>
              <span>Baixa Umidade</span>
-             <img src="assets/dashnova/TermoLaranja.svg" alt="">
+             <img class='imgs' src="assets/dashnova/TermoLaranja.svg" alt="">
              <span>43%</span>
             </div>
             <div class="legenda3">
               <span>Aceitavel</span>
-              <img src="assets/dashnova/TermoVerde.svg" alt="">
+              <img class='imgs' id="aceitavel" src="assets/dashnova/TermoVerde.svg" alt="">
               <span>46% - 59%</span>
             </div>
             <div class="legenda4">
               <span>Alerta</span>
              <span>Alta Umidade</span>
-             <img src="assets/dashnova/TermoAzulClaro.svg" alt="">
+             <img class='imgs' src="assets/dashnova/TermoAzulClaro.svg" alt="">
              <span>62%</span>
             </div>
             <div class="legenda5">
               <span>Crítico</span>
              <span>Alta Umidade</span>
-             <img src="assets/dashnova/TermoAzul.svg" alt="">
+             <img class='imgs' src="assets/dashnova/TermoAzul.svg" alt="">
              <span>65%</span>
             </div>
           </div>
         </div>
+        <div class="alerta">
+          <div class="caixaLegenda">
+            <div class="textoLegenda">
+               <span>Alerta e Gráficos</span>
+            </div>
+          </div>
+          
+          <div class="containerAlerta">
+            <div class="container1e2">
+              <div class="alerta1">
+                <h2>Laboratórios</h2>
+                <span>Críticos</span>
+                <span>Baixa Umidade</span>
+                <img class="imgs2" src="assets/dashnova/TermoVermelho" alt="">
+                <p>Lab 1 | Lab 2</p>
+              </div>
+              <div class="alerta2">
+                <h2>Laboratórios</h2>
+                <span>Alerta</span>
+                <span>Baixa Umidade</span>
+                <img class="imgs2" src="assets/dashnova/TermoLaranja.svg" alt="">
+                <p>Lab 4 | Lab 3</p>
+              </div>
+            </div>
 
-
-
-
-
-
+            <div class="container3e4">
+              <div class="alerta3">
+                <h2>Laboratórios</h2>
+                <span>Alerta</span>
+                <span>Alta Umidade</span>
+                <img class="imgs2" src="assets/dashnova/TermoAzulClaro.svg" alt="">
+                <p>Lab 6 | Lab 7</p>
+              </div>
+              <div class="alerta4">
+                <h2>Laboratórios</h2>
+                <span>Críticos</span>
+                <span>Alta Umidade</span>
+                <img class="imgs2" src="assets/dashnova/TermoAzul.svg" alt="">
+                <p>Nenhum Lab</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
       </section>
+      
 </body>
 </html>
