@@ -139,7 +139,9 @@ nav ul ul li a{
     display: flex;
     
 }
-
+.grafico{
+    border: #326F92 solid 3px;
+}
 .containerGraficos .grafico {
     width: 40vw;
     height: 40vh;
@@ -155,7 +157,12 @@ nav ul ul li a{
 }
 .chart-container{
     margin: auto;
+    display: flex;
+    justify-content: center;
    
+}
+#myChart2{
+    margin: solid 3px #345e77;
 }
 .textAler{
     font-family: 'Roboto';
